@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 编码过滤器 -->
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>com.wkk.product.web.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>RoleFilter</filter-name>
+		<filter-class>com.wkk.product.web.filter.RoleFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>RoleFilter</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 验证码生成和刷新 -->
+	<servlet>
+		<servlet-name>CheckImgServlet</servlet-name>
+		<servlet-class>com.wkk.product.web.servlet.CheckImgServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ActiveServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.ActiveServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyAccount</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.MyAccountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindUserById</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.FindUserByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModifyUserServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.ModifyUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddProductServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.AddProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListProductServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.ListProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindProductByManyConditionServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.FindProductByManyConditionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelProductServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.DelProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindProductByIdServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.FindProductByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditProductServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.EditProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowProductByPageServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.ShowProductByPageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindBookInfoServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.FindBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCartServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.AddCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangeNumServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.ChangeNumServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.CreateOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindOrderByUser</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.FindOrderByUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindOrderItemsByOrderId</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.FindOrderItemsByOrderId</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PayOnlineServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.PayOnlineServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CallBackServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.CallBackServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ConfirmOrder</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.ConfirmOrder</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelOrderByIdServlet</servlet-name>
+    <servlet-class>com.wkk.product.web.servlet.DelOrderByIdServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>CheckImgServlet</servlet-name>
+		<url-pattern>/imageCode</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActiveServlet</servlet-name>
+    <url-pattern>/active</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyAccount</servlet-name>
+    <url-pattern>/myAccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindUserById</servlet-name>
+    <url-pattern>/findUserById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyUserServlet</servlet-name>
+    <url-pattern>/modifyUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddProductServlet</servlet-name>
+    <url-pattern>/addProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListProductServlet</servlet-name>
+    <url-pattern>/listProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindProductByManyConditionServlet</servlet-name>
+    <url-pattern>/findProductByManyConditionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelProductServlet</servlet-name>
+    <url-pattern>/delProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindProductByIdServlet</servlet-name>
+    <url-pattern>/findProductByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditProductServlet</servlet-name>
+    <url-pattern>/editProductServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowProductByPageServlet</servlet-name>
+    <url-pattern>/showProductByPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindBookInfoServlet</servlet-name>
+    <url-pattern>/findBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCartServlet</servlet-name>
+    <url-pattern>/addCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeNumServlet</servlet-name>
+    <url-pattern>/changeNumServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <url-pattern>/createOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindOrderByUser</servlet-name>
+    <url-pattern>/findOrderByUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindOrderItemsByOrderId</servlet-name>
+    <url-pattern>/findOrderItemsByOrderId</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayOnlineServlet</servlet-name>
+    <url-pattern>/payOnlineServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CallBackServlet</servlet-name>
+    <url-pattern>/callBackServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConfirmOrder</servlet-name>
+    <url-pattern>/confirmOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelOrderByIdServlet</servlet-name>
+    <url-pattern>/delOrderByIdServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
