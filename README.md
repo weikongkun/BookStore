@@ -1,5 +1,5 @@
 # BookStore
-## an simple bookstore web project, which is mainly written by servlet and jsp, using utils including dbutils, beanutils and c3po. ###
+## an simple bookstore web project, which is mainly written by servlet and jsp, using utils including dbutils, beanutils and c3p0. ###
 ### IDE：Myeclipse ###
 ### Web：JSP ###
 ### Service：Servlet ###
